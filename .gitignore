@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+output/reports/*
+output/plots/*
+!output/reports/.gitkeep
+!output/plots/.gitkeep
+
+advanced-signal-analyzer/output/
