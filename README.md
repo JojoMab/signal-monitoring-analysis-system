@@ -2,6 +2,10 @@
 
 Advanced Signal Analyzer ist ein kompaktes Python-CLI zur Auswertung von Signal-Messdaten aus CSV-Dateien. Das Tool liest Signalstärken in dBm, berechnet Kennzahlen, erkennt Aussetzer, starke Peaks und statistische Auffälligkeiten und erstellt daraus Report-Dateien für die weitere Prüfung.
 
+## GitHub-Beschreibung
+
+Python-CLI zur Analyse technischer Signal-Messdaten mit Anomalieerkennung, Report-Ausgabe und optionalem Spektrum-Plot.
+
 ## Kurzprofil für Recruiter
 
 - Thema: technische Messdaten, Monitoring und Datenanalyse
@@ -45,11 +49,13 @@ Analyse inklusive Diagramm starten:
 python3 main.py --plot
 ```
 
-Der vollständige Terminal-Mitschnitt liegt hier:
+## Beispiele im Repository
 
-```txt
-examples/terminal_output.txt
-```
+Die Beispielausgaben sind bewusst versioniert, damit Recruiter das Ergebnis direkt auf GitHub prüfen können, ohne das Projekt lokal auszuführen:
+
+- [Terminal-Mitschnitt](examples/terminal_output.txt)
+
+Der Mitschnitt zeigt die Standardanalyse und die Ausführung mit `--plot`.
 
 ## Installation
 
@@ -99,6 +105,7 @@ output/plots/signal_spectrum.png
 ├── data/
 │   └── signal_samples.csv
 ├── examples/
+│   ├── README.md
 │   └── terminal_output.txt
 ├── signal_analyzer/
 │   ├── analysis.py
