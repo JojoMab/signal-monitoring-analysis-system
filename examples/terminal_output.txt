@@ -1,0 +1,18 @@
+$ python3 main.py
+Signal analysis completed.
+Report: output/reports/signal_report.txt
+Anomalies CSV: output/reports/anomalies.csv
+Signal quality: good
+Dropouts detected: 5
+Strong peaks detected: 5
+Statistical anomalies detected: 2
+
+$ python3 main.py --plot
+Signal analysis completed.
+Report: output/reports/signal_report.txt
+Anomalies CSV: output/reports/anomalies.csv
+Signal quality: good
+Dropouts detected: 5
+Strong peaks detected: 5
+Statistical anomalies detected: 2
+Plot: output/plots/signal_spectrum.png
