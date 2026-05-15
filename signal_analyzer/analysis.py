@@ -47,10 +47,17 @@ def detect_anomalies(samples: list[SignalSample], sensitivity: float = 2.0) -> l
             anomalies.append({
                 "frequency_mhz": sample.frequency_mhz,
                 "signal_strength_dbm": sample.signal_strength_dbm,
-                "z_score": round(z_score, 2)
+                "z_score": round(z_score, 2),
+                "anomaly_type": classify_anomaly_type(sample.signal_strength_dbm, avg),
             })
 
     return anomalies
+
+
+def classify_anomaly_type(signal_strength_dbm: float, average_dbm: float) -> str:
+    if signal_strength_dbm >= average_dbm:
+        return "strong_peak"
+    return "dropout"
 
 
 def classify_signal_quality(stats: dict) -> str:
@@ -63,3 +70,22 @@ def classify_signal_quality(stats: dict) -> str:
     if avg >= -80:
         return "weak"
     return "critical"
+
+
+def calculate_health_score(
+    stats: dict,
+    dropouts: list[SignalSample],
+    peaks: list[SignalSample],
+    anomalies: list[dict],
+) -> int:
+    score = 100
+    score -= len(dropouts) * 6
+    score -= len(anomalies) * 4
+    score -= max(0, stats["std_dev_dbm"] - 8) * 2
+
+    if stats["average_dbm"] < -70:
+        score -= 10
+    if peaks and len(peaks) > max(1, stats["sample_count"] * 0.2):
+        score -= 5
+
+    return max(0, min(100, round(score)))

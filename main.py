@@ -8,6 +8,7 @@ from signal_analyzer.analysis import (
     detect_signal_peaks,
     detect_anomalies,
     classify_signal_quality,
+    calculate_health_score,
 )
 from signal_analyzer.report import create_text_report, export_anomalies_csv
 
@@ -44,6 +45,7 @@ def main():
     peaks = detect_signal_peaks(samples, args.peak_threshold)
     anomalies = detect_anomalies(samples, args.sensitivity)
     quality = classify_signal_quality(stats)
+    health_score = calculate_health_score(stats, dropouts, peaks, anomalies)
 
     report_path = create_text_report(
         samples=samples,
@@ -54,6 +56,7 @@ def main():
         peaks=peaks,
         anomalies=anomalies,
         quality=quality,
+        health_score=health_score,
         output_path=args.report,
     )
 
@@ -63,6 +66,7 @@ def main():
     print(f"Report: {report_path}")
     print(f"Anomalies CSV: {anomalies_path}")
     print(f"Signal quality: {quality}")
+    print(f"Health score: {health_score}/100")
     print(f"Dropouts detected: {len(dropouts)}")
     print(f"Strong peaks detected: {len(peaks)}")
     print(f"Statistical anomalies detected: {len(anomalies)}")

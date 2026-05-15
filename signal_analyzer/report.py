@@ -13,6 +13,7 @@ def create_text_report(
     peaks: list[SignalSample],
     anomalies: list[dict],
     quality: str,
+    health_score: int,
     output_path: str
 ) -> str:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -22,6 +23,7 @@ def create_text_report(
         file.write("===============================\n\n")
         file.write(f"Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         file.write(f"Signal quality: {quality}\n\n")
+        file.write(f"Health score: {health_score}/100\n\n")
 
         file.write("Statistics\n")
         file.write("----------\n")
@@ -59,7 +61,8 @@ def create_text_report(
                 file.write(
                     f"{anomaly['frequency_mhz']} MHz -> "
                     f"{anomaly['signal_strength_dbm']} dBm "
-                    f"(z-score: {anomaly['z_score']})\n"
+                    f"(z-score: {anomaly['z_score']}, "
+                    f"type: {anomaly['anomaly_type']})\n"
                 )
         else:
             file.write("No statistical anomalies detected.\n")
@@ -71,7 +74,7 @@ def export_anomalies_csv(anomalies: list[dict], output_path: str) -> str:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     with open(output_path, "w", newline="", encoding="utf-8") as file:
-        fieldnames = ["frequency_mhz", "signal_strength_dbm", "z_score"]
+        fieldnames = ["frequency_mhz", "signal_strength_dbm", "z_score", "anomaly_type"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(anomalies)
