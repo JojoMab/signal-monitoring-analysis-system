@@ -1,37 +1,37 @@
 # Advanced Signal Analyzer
 
-Advanced Signal Analyzer ist ein kompaktes Python-CLI zur Auswertung von Signal-Messdaten aus CSV-Dateien. Das Tool liest Signalstärken in dBm, berechnet Kennzahlen, erkennt Aussetzer, starke Peaks und statistische Auffälligkeiten und erstellt daraus Report-Dateien für die weitere Prüfung.
+Advanced Signal Analyzer is a compact Python CLI for evaluating signal measurement data from CSV files. The tool reads signal strengths in dBm, calculates statistics, detects dropouts, strong peaks and statistical anomalies, and writes report files for further inspection.
 
-## GitHub-Beschreibung
+## GitHub Description
 
-Python-CLI zur Analyse technischer Signal-Messdaten mit Anomalieerkennung, Report-Ausgabe und optionalem Spektrum-Plot.
+Python CLI for technical signal measurement analysis with anomaly detection, report output and optional spectrum plotting.
 
-## Kurzprofil für Recruiter
+## Recruiter Snapshot
 
-- Thema: technische Messdaten, Monitoring und Datenanalyse
-- Technologie: Python, CSV-Verarbeitung, Statistik, CLI, optionale Visualisierung mit Matplotlib
-- Eingabe: Frequenz- und Signalstärke-Werte aus `data/signal_samples.csv`
-- Ausgabe: Textreport, Anomalie-CSV und optionales PNG-Spektrum
-- Fokus: nachvollziehbare Analyse technischer Daten ohne komplexe Einrichtung
+- Topic: technical measurement data, monitoring and data analysis
+- Technology: Python, CSV processing, statistics, CLI, optional visualization with Matplotlib
+- Input: frequency and signal strength values from `data/signal_samples.csv`
+- Output: text report, anomaly CSV and optional PNG spectrum
+- Focus: traceable technical data analysis without complex setup
 
-## Funktionen
+## Features
 
-- Signalwerte aus CSV-Dateien laden
-- Durchschnitt, Median, Standardabweichung, Minimum und Maximum berechnen
-- Dropouts, starke Peaks und statistische Anomalien erkennen
-- Signalqualität als `excellent`, `good`, `weak` oder `critical` klassifizieren
-- Textreport und Anomalie-CSV erzeugen
-- optional ein PNG-Diagramm des Signalspektrums erzeugen
+- load signal values from CSV files
+- calculate average, median, standard deviation, minimum and maximum
+- detect dropouts, strong peaks and statistical anomalies
+- classify signal quality as `excellent`, `good`, `weak` or `critical`
+- generate a text report and anomaly CSV
+- optionally generate a PNG spectrum plot
 
-## Schnellstart
+## Quick Start
 
-Analyse aus dem Repository-Root starten:
+Run the analysis from the repository root:
 
 ```bash
 python3 main.py
 ```
 
-Erwartete Terminalausgabe:
+Expected terminal output:
 
 ```txt
 Signal analysis completed.
@@ -43,35 +43,35 @@ Strong peaks detected: 5
 Statistical anomalies detected: 2
 ```
 
-Analyse inklusive Diagramm starten:
+Run the analysis including the plot:
 
 ```bash
 python3 main.py --plot
 ```
 
-## Beispiele im Repository
+## Examples
 
-Die Beispielausgaben sind bewusst versioniert, damit Recruiter das Ergebnis direkt auf GitHub prüfen können, ohne das Projekt lokal auszuführen:
+The example outputs are versioned intentionally so recruiters can inspect the result directly on GitHub without running the project locally:
 
-- [Terminal-Mitschnitt](examples/terminal_output.txt)
+- [Terminal output](examples/terminal_output.txt)
 
-Der Mitschnitt zeigt die Standardanalyse und die Ausführung mit `--plot`.
+The terminal output shows the standard analysis and the run with `--plot`.
 
 ## Installation
 
-Die Basisanalyse nutzt nur Python-Standardbibliotheken. Für das optionale Diagramm wird `matplotlib` benötigt:
+The base analysis only uses Python standard libraries. The optional plot requires `matplotlib`:
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-## Eigene Daten analysieren
+## Analyze Custom Data
 
 ```bash
 python3 main.py --input path/to/signals.csv
 ```
 
-Die Eingabe-CSV benötigt diese Spalten:
+The input CSV needs these columns:
 
 ```csv
 frequency_mhz,signal_strength_dbm
@@ -81,22 +81,22 @@ frequency_mhz,signal_strength_dbm
 2408,-88
 ```
 
-## Ausgaben
+## Outputs
 
-Standardausgabe:
+Default output:
 
 ```txt
 output/reports/signal_report.txt
 output/reports/anomalies.csv
 ```
 
-Bei Nutzung von `--plot` entsteht zusätzlich:
+When `--plot` is used, the program also creates:
 
 ```txt
 output/plots/signal_spectrum.png
 ```
 
-## Projektstruktur
+## Project Structure
 
 ```txt
 .
@@ -117,6 +117,6 @@ output/plots/signal_spectrum.png
     └── reports/
 ```
 
-## Bewerbungsbezug
+## Portfolio Relevance
 
-Das Projekt zeigt praktische Python-Kenntnisse in CSV-Verarbeitung, statistischer Auswertung, Kommandozeilen-Tools, Report-Erstellung und einfacher Visualisierung technischer Messdaten. Für Rollen mit IT-, Monitoring-, Datenanalyse- oder Systembezug ist es ein gut nachvollziehbares Beispielprojekt.
+This project demonstrates practical Python skills in CSV processing, statistical analysis, command-line tooling, report generation and simple visualization of technical measurement data. It is a clear portfolio example for IT, monitoring, data analysis and system-oriented roles.
