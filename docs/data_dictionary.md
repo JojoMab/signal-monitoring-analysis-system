@@ -1,6 +1,6 @@
 # Data Dictionary
 
-Die Datei `data/signal_samples.csv` enthaelt synthetische technische Messwerte fuer das Bewerberprojekt.
+Die Datei `data/signal_samples.csv` enthält synthetische technische Messwerte für das Bewerberprojekt.
 
 | Spalte | Typ | Beschreibung | Beispiel |
 | --- | --- | --- | --- |
@@ -9,10 +9,10 @@ Die Datei `data/signal_samples.csv` enthaelt synthetische technische Messwerte f
 
 ## Validierung
 
-Die Anwendung prueft:
+Die Anwendung prüft:
 
 - ob die erforderlichen Spalten vorhanden sind
-- ob die Datei mindestens einen Datenwert enthaelt
+- ob die Datei mindestens einen Datenwert enthält
 - ob Frequenz und Signalstaerke als Zahlen gelesen werden koennen
 
 ## Hinweis

@@ -2,9 +2,9 @@
 
 ## Kurzbeschreibung
 
-Advanced Signal Analyzer ist ein Python-Bewerberprojekt fuer technische Sensordatenanalyse. Die Anwendung liest synthetische Signalwerte aus CSV-Dateien ein, berechnet Kennzahlen, erkennt Auffaelligkeiten und erzeugt Reports.
+Advanced Signal Analyzer ist ein Python-Bewerberprojekt für technische Sensordatenanalyse. Die Anwendung liest synthetische Signalwerte aus CSV-Dateien ein, berechnet Kennzahlen, erkennt Auffälligkeiten und erzeugt Reports.
 
-## Relevanz fuer duale Studiengaenge
+## Relevanz für duale Studiengaenge
 
 Das Projekt passt zu dualen Studiengaengen in Informatik, Wirtschaftsinformatik, Data Science und technischer Informatik. Es zeigt, dass technische Daten strukturiert verarbeitet, bewertet und verstaendlich dokumentiert werden koennen.
 
