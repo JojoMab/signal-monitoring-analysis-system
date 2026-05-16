@@ -12,3 +12,10 @@ output/reports/*
 output/plots/*
 !output/reports/.gitkeep
 !output/plots/.gitkeep
+*.pyo
+*.egg-info/
+dist/
+build/
+charts/
+reports/
+data/*.db

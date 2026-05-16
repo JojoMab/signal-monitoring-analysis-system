@@ -1,6 +1,6 @@
-# Signal Monitoring Analysis System
-
 ![Python CI](https://github.com/JojoMab/signal-monitoring-analysis-system/actions/workflows/python-ci.yml/badge.svg)
+
+# Signal Monitoring Analysis System
 
 Dieses Bewerberprojekt analysiert synthetische Sensordaten mit Frequenz, Amplitude, Rauschen und Zeitstempel. Es erkennt Anomalien mit Z-Score-Logik, berechnet einen Health Score und erzeugt technische Monitoring-Berichte.
 
@@ -52,7 +52,7 @@ signal-monitoring-analysis-system/
 python main.py
 ```
 
-## Tests
+## Tests ausführen
 
 ```bash
 python -m unittest discover -s tests -v
@@ -68,7 +68,7 @@ Health score: 49/100
 
 ## Hinweis auf synthetische Daten
 
-Alle Messwerte sind synthetisch. Das Projekt simuliert eine technische Datenanalyse und verwendet keine echten Unternehmensdaten.
+Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
 
 ## English Summary
 
