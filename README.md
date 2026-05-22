@@ -8,7 +8,7 @@ Dieses Bewerberprojekt analysiert synthetische Sensordaten mit Frequenz, Amplitu
 
 Das Projekt passt zu technischer Informatik, Informatik, Data Science und KI-Grundlagen. Es ist relevant für MTU, Rohde & Schwarz, KNDS, Infineon und ASMPT.
 
-## Tech Stack
+## Technologie-Stack
 
 - Python 3.11
 - CSV-Daten
@@ -75,6 +75,6 @@ Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
 
 Dieses Projekt ist ein Bewerberprojekt und nicht für den produktiven Einsatz vorgesehen.
 
-## English Summary
+## Kurzfassung
 
-This project analyzes synthetic sensor signals and demonstrates anomaly detection, health scoring and monitoring reports. It is designed as an applicant portfolio project for technical computer science and data-oriented study programs.
+Dieses Projekt analysiert synthetische Sensorsignale und zeigt Anomalieerkennung, Health-Score-Berechnung und technische Monitoring-Berichte. Es ist als Bewerberprojekt für technische Informatik und datenorientierte Studiengänge aufgebaut.
