@@ -14,6 +14,7 @@ Das Projekt passt zu technischer Informatik, Informatik, Data Science und KI-Gru
 - CSV-Daten
 - Statistik mit Z-Score
 - Health-Score-Logik
+- optionale Matplotlib-Plots
 - Unit Tests
 - GitHub Actions
 
@@ -38,9 +39,10 @@ Das Projekt passt zu technischer Informatik, Informatik, Data Science und KI-Gru
 signal-monitoring-analysis-system/
 ├── main.py
 ├── signal_analyzer/
-│   ├── anomaly_detector.py
-│   ├── health_scorer.py
-│   └── report_generator.py
+│   ├── analysis.py
+│   ├── reader.py
+│   ├── report.py
+│   └── plotter.py
 ├── data/
 ├── tests/
 └── docs/
@@ -49,13 +51,14 @@ signal-monitoring-analysis-system/
 ## Schnellstart
 
 ```bash
+python -m pip install -r requirements.txt
 python main.py
 ```
 
 ## Tests ausführen
 
 ```bash
-python -m unittest discover -s tests -v
+python -m pytest tests/ -v
 ```
 
 ## Beispielausgabe
@@ -69,6 +72,8 @@ Health score: 49/100
 ## Hinweis auf synthetische Daten
 
 Alle Daten sind synthetisch und dienen ausschließlich der Demonstration.
+
+Dieses Projekt ist ein Bewerberprojekt und nicht für den produktiven Einsatz vorgesehen.
 
 ## English Summary
 

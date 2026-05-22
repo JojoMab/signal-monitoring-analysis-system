@@ -23,7 +23,7 @@ Advanced Signal Analyzer analysiert synthetische technische Sensordaten aus CSV-
 - Statistik: Mittelwert, Median, Standardabweichung, Z-Score
 - Monitoring: Dropouts, Peaks, Anomalietypen, Health Score
 - Reporting: Textreport und CSV-Export
-- Visualisierung: optionaler PNG-Plot mit matplotlib
+- Visualisierung: optionaler PNG-Plot der Signalstärke nach Frequenz mit matplotlib
 - Testing: unittest
 - CI/CD-Grundlagen: GitHub Actions
 - Business-/IT-Bezug: Digital Maintenance, technische Entscheidungsunterstuetzung

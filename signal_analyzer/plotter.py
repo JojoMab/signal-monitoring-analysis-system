@@ -37,7 +37,7 @@ def create_signal_plot(samples: list[SignalSample], output_path: str) -> str:
     plt.plot(frequencies, strengths, marker="o")
     plt.xlabel("Frequency (MHz)")
     plt.ylabel("Signal Strength (dBm)")
-    plt.title("Signal Spectrum")
+    plt.title("Signal Strength by Frequency")
     plt.grid(True)
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
     plt.close()

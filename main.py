@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument("--report", default="output/reports/signal_report.txt", help="Output text report path")
     parser.add_argument("--anomalies", default="output/reports/anomalies.csv", help="Output anomalies CSV path")
     parser.add_argument("--plot", action="store_true", help="Generate signal plot")
-    parser.add_argument("--plot-output", default="output/plots/signal_spectrum.png", help="Output plot path")
+    parser.add_argument("--plot-output", default="output/plots/signal_strength_by_frequency.png", help="Output plot path")
     return parser.parse_args()
 
 
